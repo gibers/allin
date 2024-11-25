@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    container_name: allin-pg-c
+    ports:
+      - "54321:5432"
+    environment:
+      - POSTGRES_USER=bertrand
+      - POSTGRES_PASSWORD=A1b2C3d4E5f6G7h8I9j0
+      - POSTGRES_DB=allin
+    volumes:
+      - ${HOME}/data/postgres-modulej9/allin:/var/lib/postgresql/data
+
